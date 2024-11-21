@@ -16,7 +16,7 @@ let milliseconds = 0;
 let time = null;
 
 // スタートボタンのイベント
-start.addEventListener("click", () => {
+start.addEventListener("click", function() {
   time = setInterval(updateTime, 100);
   start.disabled = true;
   stop.disabled = false;
@@ -24,14 +24,14 @@ start.addEventListener("click", () => {
 });
 
 // ストップボタンのイベント
-stop.addEventListener("click", () => {
+stop.addEventListener("click", function() {
   clearInterval(time);
   start.disabled = false;
   stop.disabled = true;
 });
 
 // リセットボタンのイベント
-reset.addEventListener("click", () => {
+reset.addEventListener("click", function() {
   clearInterval(time);
   hours = 0;
   minutes = 0;
