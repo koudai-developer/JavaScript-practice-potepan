@@ -46,18 +46,22 @@ reset.addEventListener("click", function() {
   reset.disabled = true;
 });
 
+const millisecondsLimit = 10;
+const secondsLimit = 60;
+const minutesLimit = 60;
+
 // 時間を更新する関数
 function updateTime() {
   milliseconds++;
-  if (milliseconds === 10) {
+  if (milliseconds === millisecondsLimit) {
     milliseconds = 0;
     seconds++;
   }
-  if (seconds === 60) {
+  if (seconds === secondsLimit) {
     seconds = 0;
     minutes++;
   }
-  if (minutes === 60) {
+  if (minutes === minutesLimit) {
     minutes = 0;
     hours++;
   }
